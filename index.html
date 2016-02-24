@@ -4,15 +4,19 @@
     <meta charset="utf-8">
     <title>Angular IMBD App</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   </head>
   <body ng-app='IMBDApp'>
-  <div class='verticle-center' ng-controller="apiController">
-      <input type="text" ng-model='search'>
-      <input type="submit" value="Search">
-      <div  ng-repeat="movie in related.Search">
-      <h3> {{ movie.Title }} </h3>
-      <img ng-src="{{ movie.Poster=='N/A' ? 'http://placehold.it/150x220&text=N/A' : movie.Poster }}">
-      </div>
+    <div class='container' ng-controller="apiController" style='text-align:center'>
+        <h1>Angular OMBd API Search</h1>
+        <input type="text" ng-model='search'>
+        <input type="submit" value="Search">
+        <div  ng-repeat="movie in related.Search" style='text-align:center'>
+        <a href="#" id="{{ $index + 1 }}" ng-click="update(movie)">
+          <h3> {{ movie.Title }} </h3>
+        </a>
+        <h5> {{movie.Year}} </h5>
+    </div>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
