@@ -1,6 +1,6 @@
-<div class='columns'>
-<div ng-repeat="movie in movies" class='container column is-6 is-multiline'>
-  <div class='cloumn'>
+<div class='container' style='height:1000px'>
+<div class='columns is-multiline is-centered'>
+  <div class='cloumn is-half' ng-repeat="movie in movies" id='mulitpleMovie'>
     <a href="/#/{{movie.imdbID}}/show">
       <h3> {{movie.Title}} </h3>
     </a>

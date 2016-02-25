@@ -6,3 +6,12 @@
 .columns{
   height: auto;
 }
+
+#mulitpleMovie{
+  background-color: #F5F7FA;
+  margin: 10px;
+  border: solid grey 2px;
+  padding: 20px;
+  text-align: center;
+  width: 400px;
+}
