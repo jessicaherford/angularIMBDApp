@@ -4,6 +4,7 @@ app.controller('showMovieController', ['$scope', '$http', '$routeParams', functi
 $http.get("http://www.omdbapi.com/?i=" + $routeParams.searchParam).then(function(payload){
   $scope.movies = [];
   $scope.movies.push(payload.data);
+  console.log($scope.movies);
 })
 
   $scope.update = function(movie){

@@ -1,10 +1,14 @@
-<h1>Movie Show Page</h1>
   <div class='container' ng-repeat='movie in movies'>
-    <div>
-      <h3> {{movie.Title}} </h3>
-    <h5> {{movie.Year}} </h5>
-  <!-- <img ng-src='{{movie.Poster}}'> -->
+    <h3 style='text-align:center'> {{movie.Title}} </h3>
 
+    <div class='columns'>
+    <br>
+    <div class='column is-half'>
+      <img src="{{movie.Poster === 'N/A' ? 'http://placehold.it/350x620&text=N/A' : movie.Poster }}">
+    </div>
+
+  <div class='column'>
+    <h5> {{movie.Year}} </h5>
    <p>Starring: {{movie.Actors}}</p>
    <p>{{movie.Plot}}</p>
    <h3>Additional Details</h3>
@@ -30,5 +34,6 @@
    <p>{{movie.imdbRating}}</p>
    <h4>IMDB Votes</h4>
    <p>{{movie.imdbVotes}}</p>
+   </div>
 </div>
 </div>
