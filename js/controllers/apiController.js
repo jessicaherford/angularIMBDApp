@@ -1,5 +1,7 @@
 app.controller('apiController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
 
+
+
   $scope.submitPost = function(){
   $http.get("http://www.omdbapi.com/?s=" + $scope.input)
   .then(function(response){
