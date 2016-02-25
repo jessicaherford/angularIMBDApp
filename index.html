@@ -4,20 +4,28 @@
     <meta charset="utf-8">
     <title>Angular IMBD App</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.15/css/bulma.min.css" media="screen" title="no title" charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body ng-app='IMBDApp'>
     <div class='hero' ng-controller="apiController">
-      <div class='is-centered'>
+      <div class='is-centered' id='searchArea'>
         <h1>Angular OMBd API Search</h1>
+        <br>
+        <h4>Enter a movie by title:</h4>
         <form ng-submit='submitPost()'>
         <input type="text" ng-model='input' autofocus placeholder="Movie title">
+        <br>
+        <br>
         <a href='/#/{{input}}'>
-          <input type="submit" value="Search" ng-click='submitPost()'>
+          <button type="submit" class="btn btn-primary" ng-click='submitPost()'>Search<i class="fa fa-arrow-right"></i></button>
+
         </a>
         </form>
         </div>
+        <hr>
         <div ng-view class='section' style='height: auto'>
         </div>
 

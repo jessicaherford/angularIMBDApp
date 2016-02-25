@@ -1,5 +1,5 @@
-  <div class='container' ng-repeat='movie in movies'>
-    <h3 style='text-align:center'> {{movie.Title}} </h3>
+  <div class='container' ng-repeat='movie in movies' style='border: solid black 2px;'>
+    <h1 style='text-align:center'> {{movie.Title}} </h1>
 
     <div class='columns'>
     <br>
@@ -7,8 +7,7 @@
       <img src="{{movie.Poster === 'N/A' ? 'http://placehold.it/350x620&text=N/A' : movie.Poster }}">
     </div>
 
-  <div class='column'>
-    <h5> {{movie.Year}} </h5>
+  <div class='column' style='text-align:left'>
    <p>Starring: {{movie.Actors}}</p>
    <p>{{movie.Plot}}</p>
    <h3>Additional Details</h3>

@@ -5,13 +5,27 @@
 
 .columns{
   height: auto;
+  margin: 10px;
 }
 
 #mulitpleMovie{
-  background-color: #F5F7FA;
   margin: 10px;
   border: solid grey 2px;
   padding: 20px;
-  text-align: center;
   width: 400px;
+  text-align: left;
+}
+
+#searchArea{
+  margin: 20px;
+  padding: 20px;
+}
+
+i{
+  margin-top: 2px;
+  margin-left: 10px;
+}
+
+*{
+  font-family: 'Alegreya', serif;
 }
